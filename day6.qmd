@@ -1,0 +1,14 @@
+---
+title: "D6 Interactive"
+format: html
+editor: visual
+execute: 
+  echo: true
+  warning: false
+---
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+```
