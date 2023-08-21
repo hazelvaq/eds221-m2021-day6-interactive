@@ -1,0 +1,29 @@
+---
+title: "day6"
+format: html
+editor: visual
+---
+
+## Warm up:
+
+```{r}
+book_vector <- c("brown bear", "red bird", "yellow duck", "blue horse")
+
+for(i in 1:(length(book_vector)-1)){
+  print(paste0(book_vector[i],", ",book_vector[i],", what do you see?", " I see a ", book_vector[i+1], " looking at me"))
+}
+```
+
+### How to "tidy data"
+
+```{r}
+dogs <- data.frame(dog_name = c("teddy","khora"), week_1 = c(20,17), week_2 = c(21,24), week_3 = c(18,25))
+
+## pivot_longer
+
+library(tidyr)
+
+dogs_longer <- dogs %>% tidyr::pivot_longer(week_1:week_3,names_to = "week", values_to = "miles")
+
+dogs_longer
+```
